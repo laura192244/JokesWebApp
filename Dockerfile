@@ -7,7 +7,8 @@ RUN dotnet restore "JokesWebApp.csproj"
 
 COPY . .
 
-RUN dotnet publish "JokesWebApp.csproj" -c Release -o /app/publish
+RUN dotnet clean "JokesWebApp.csproj"
+RUN dotnet publish "JokesWebApp.csproj" -c Release -o /app/publish --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 
