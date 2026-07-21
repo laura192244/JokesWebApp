@@ -1,0 +1,6 @@
+bin/
+obj/
+.vs/
+*.csproj.user
+Properties/serviceDependencies.local.json
+Properties/serviceDependencies.local.json.user
